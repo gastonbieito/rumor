@@ -138,6 +138,11 @@ ${open ? '' : `<g transform="translate(0 48)"><path d="M-10 -4 v-6 a10 10 0 0 1 
     g.dataset.label = 'nivel' + lv.id;
     g.addEventListener('pointerdown', e => { e.stopPropagation(); if (!open) { Sound.init(); Sound.no(); return; } Sound.init(); Sound.tap(); level(lv.id); });
   });
+  // Volver al portal de juegos (solo en la página publicada).
+  if (location.protocol.indexOf('http') === 0) {
+    let cl = ''; try { cl = JSON.parse(localStorage.getItem('portalClase') || '""'); } catch (e) { }
+    button(L.ui, 92, 44, 150, 52, '⌂ Juegos', () => { location.href = '/' + (cl ? '#/' + cl : ''); }, { fill: '#2c3770', ink: COL.ink, fs: 22 }).dataset.label = 'portal';
+  }
   soundButton();
 }
 
