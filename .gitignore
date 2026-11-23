@@ -1,0 +1,6 @@
+node_modules/
+tests/out/
+
+tests/ultima-prueba.txt
+dist/
+tests/ultima-prueba.txt

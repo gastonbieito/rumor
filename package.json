@@ -1,0 +1,1 @@
+{"name":"el-rumor","private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node build.mjs && node tests/check.mjs"},"devDependencies":{"@fontsource/nunito":"^5.3.0","playwright-core":"^1.65.1"}}
